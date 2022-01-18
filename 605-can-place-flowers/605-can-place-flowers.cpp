@@ -4,7 +4,7 @@ public:
         
         // 0 can be changed with 1
         
-        // on N consective zeroes max N/2 1's can be placed
+        // on N consective zeroes max N/2 or N/2-1 or N/2+1 1's can be placed
         
         int max=0;
         
