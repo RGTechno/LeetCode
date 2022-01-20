@@ -17,9 +17,11 @@ public:
                     count+=((piles[i]/m)+1);
                 }
             }
+            
+            if(count>h) return false;
         }
         
-        return count<=h;
+        return true;
     }
     
     int minEatingSpeed(vector<int>& piles, int h) {
