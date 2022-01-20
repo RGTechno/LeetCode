@@ -24,18 +24,18 @@ public:
     
     int minEatingSpeed(vector<int>& piles, int h) {
         
-        int l=1,r=1e9; //1e9 == 1000000000
+        int l=0,r=1e9; //1e9 == 1000000000
         
-        while(l<=r){
+        while(r-l>1){
             int m = (l+r)/2;
             
             if(good(piles,h,m)){
-                r=m-1;
+                r=m;
             }else{
-                l=m+1;
+                l=m;
             }
         }
         
-        return r+1;
+        return r;
     }
 };
