@@ -24,7 +24,7 @@ public:
     
     int minEatingSpeed(vector<int>& piles, int h) {
         
-        int l=0,r=1e9; //1e9 == 1000000000
+        int l=0,r=*max_element(piles.begin(),piles.end()); //1e9 == 1000000000
         
         while(r-l>1){
             int m = (l+r)/2;
