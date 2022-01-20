@@ -6,18 +6,7 @@ public:
         int count = 0;
         
         for(int i=0;i<piles.size();i++){
-            if(piles[i]<=m){
-                count+=1;
-            }
-            else{
-                if(piles[i]%m==0){
-                    count+=(piles[i]/m);
-                }
-                else{
-                    count+=((piles[i]/m)+1);
-                }
-            }
-            
+            count+=(piles[i]/m)+(piles[i]%m!=0);                          
             if(count>h) return false;
         }
         
