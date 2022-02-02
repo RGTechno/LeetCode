@@ -8,9 +8,9 @@ public:
         
         /* 
            whenever a window is invalid (window size==k) i.e the window starting 
-           from st is not valid so we increment s[st] by 1 because
+           from st is not valid so we increment mp[st] by 1 because
            we decreased earlier, so only excluding element at st from window 
-           that is why only s[st] is incremented because others are still part
+           that is why only mp[st] is incremented because others are still part
            of window.
            
            Basically whenever a window is completed and is invalid we only retain back
