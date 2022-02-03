@@ -7,13 +7,13 @@ public:
         
         map<int,int> mp;
         
+        int count = 0;
+        
         for(auto i:nums1){
             for(auto j:nums2){
                 mp[(i+j)]++;
             }
         }
-        
-        int count = 0;
         
         for(auto i:nums3){
             for(auto j:nums4){
