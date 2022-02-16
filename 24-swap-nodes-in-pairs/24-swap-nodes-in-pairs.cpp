@@ -9,16 +9,19 @@
  * };
  */
 class Solution {
+    void solve(ListNode *head){
+        if(head!=NULL and head->next!=NULL){
+            swap(head->val,head->next->val);
+            
+            solve(head->next->next);
+        }
+    }
 public:
     ListNode* swapPairs(ListNode* head) {
         
         ListNode *temp = head;
         
-        while(temp!=NULL and temp->next!=NULL){
-            swap(temp->val,temp->next->val);
-            
-            temp = temp->next->next;
-        }
+        solve(head);
         
         return head;
     }
