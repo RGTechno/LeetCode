@@ -1,21 +1,14 @@
 class Solution {
-public:    
-    void yssir(vector<char>& h,int i=0) {
-        if(i==h.size()) return;
+public:
+    void reverseString(vector<char>& str) {
         
-        char first = h[i];
+        int s=0,e=str.size()-1;
         
-        yssir(h,i+1); 
-    
-        h.push_back(first);
-    }
-    void reverseString(vector<char>& s) {
-        vector<char> h;
-        for(auto i:s) h.push_back(i);
-        yssir(h);
-        
-        for(int i=0;i<s.size();i++){
-            s[i]=h[i+s.size()];
+        while(s<=e){
+            swap(str[e],str[s]);
+            s++;
+            e--;
         }
+        
     }
 };
