@@ -17,16 +17,10 @@ public:
     }
     
     int maxSatisfaction(vector<int>& satisfaction) {
-        
-        int n = satisfaction.size();
-        
+                
         sort(satisfaction.begin(),satisfaction.end());
-        
-        int ans = 0;
-        
+                
         return solve(satisfaction);
-        
-        return ans;
-        
+                
     }
 };
