@@ -31,15 +31,19 @@ class Solution {
             return;
         }
         
-        solve(n,s+'(');
-        solve(n,s+')');
+        s.push_back(')');
+        solve(n,s);
+        s.pop_back();
+        s.push_back('(');
+        solve(n,s);
+        s.pop_back();
     }
     
 public:
     vector<string> generateParenthesis(int n) {
                 
         string s;
-        solve(n,"");
+        solve(n,s);
         
         return v;
         
