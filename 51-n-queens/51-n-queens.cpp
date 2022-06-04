@@ -46,12 +46,7 @@ class Solution {
     
     void solve(vector<string> &v,int n,int row=0){
         
-        print(v);
-        cout<<"----\n"<<row<<endl;
-        
         if(row==n){
-            // print(v);
-            // cout<<"-----\n";
             ans.push_back(v);
             return;
         }
@@ -59,11 +54,8 @@ class Solution {
         for(int i=row;i<n;i++){
             int j;
             for(j=0;j<n;j++){
-                cout<<"("<<i<<","<<j<<")\n";
                 if(good(v,n,i,j)){
-                    cout<<v[i][j]<<"=>";
                     v[i][j]='Q';
-                    cout<<v[i][j]<<endl;
                     solve(v,n,i+1);
                     v[i][j]='.'; 
                 }
