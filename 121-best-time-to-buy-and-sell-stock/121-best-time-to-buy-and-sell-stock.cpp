@@ -14,7 +14,7 @@ public:
             pref[i]=maxVal;
         }
         
-        int ans  = 0;
+        int ans = 0;
         
         for(int i=0;i<n;i++){
             int profit = pref[i]-prices[i];
