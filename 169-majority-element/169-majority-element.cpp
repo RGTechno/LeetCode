@@ -2,19 +2,17 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         
-        map<int,int> mp;
+        int count = 0;  // number of majority element + minority element    
+        // if count = 0 i.e majority element not found yet
+        int majorityEle = 0;
         
         for(auto &i:nums){
-            mp[i]++;
+            if(count==0) majorityEle = i;
+            if(majorityEle == i) count++;
+            else count--;
         }
         
-        int n = nums.size();
-        
-        for(auto &i:mp){
-            if(i.second>n/2) return i.first;
-        }
-        
-        return 0;
+        return majorityEle;
         
     }
 };
