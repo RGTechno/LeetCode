@@ -1,20 +1,22 @@
 class Solution {
+    vector<string> v;
 public:
-    string codes[26] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
-    
+    Solution(){
+        v = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+    }
     int uniqueMorseRepresentations(vector<string>& words) {
-        int n=words.size();
         
         set<string> st;
         
-        for(int i=0;i<n;i++){
+        for(auto &i:words){
             string s="";
-            for(int j=0;j<words[i].size();j++){
-                s+=codes[words[i][j]-'a'];
+            for(auto &j:i){
+                s+=v[j-'a'];
             }
             st.insert(s);
         }
         
         return st.size();
+        
     }
 };
